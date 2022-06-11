@@ -56,17 +56,17 @@ function makeHobbits() {
 	console.log('2: makeHobbits')
 
 	// display an `unordered list` of hobbits in the shire
-	const ul = document.createElement('ul')
+	const hobbitsList = document.createElement('ul')
 
 	for (let i = 0; i < hobbits.length; i++) {
 		let li = document.createElement('li');
 		li.setAttribute('class', 'hobbit')
 		li.setAttribute('id', hobbits[i])
-		ul.appendChild(li)
+		hobbitsList.appendChild(li)
 		li.innerText = hobbits[i]
 		console.log(li)
 	}
-	document.getElementById(lands[0]).appendChild(ul)
+	document.getElementById(lands[0]).appendChild(hobbitsList)
 	// give each hobbit a class of `hobbit`
 
 	// hint: create a 'ul' outside the loop into which to append the 'li's
@@ -158,8 +158,26 @@ function makeBuddies() {
 
 function leaveTheShire() {
 	console.log('6: leaveTheShire')
-
+	
 	// assemble the `hobbits` and move them to `rivendell`
+	const hobbitsList = document.querySelector('.hobbit')
+	// const frodo = document.getElementById("#Frodo Baggins")
+	// const sam = document.getElementById("#Meriadoc \"Merry\" Brandybuck")
+	// const pippin = document.getElementById("#Frodo Baggins")
+	// const merry = document.getElementById("#Frodo Baggins")
+
+	 for (let i = 0; i < hobbits.length; i++) {
+	 	hobbitsList.remove(document.getElementById(`#${hobbits[i]}`))
+	// 	hobbitsList.remove
+	 } 
+	// hobbitsList.remove(frodo)
+	// hobbitsList.remove(sam)
+	// hobbitsList.remove(merry)
+	// hobbitsList.remove(pippin)
+	// `Frodo Baggins`,
+	// `Samwise "Sam" Gamgee`,
+	// `Meriadoc "Merry" Brandybuck`,
+	// `Peregrin "Pippin" Took`,
 }
 
 // COMMIT YOUR WORK
