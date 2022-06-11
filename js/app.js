@@ -133,6 +133,9 @@ function makeBuddies() {
 
 	// create an `aside` tag
 	const aside = document.createElement('aside');
+	aside.setAttribute('id', 'aside')
+	console.log(aside)
+
 
 	// put an `unordered list` of the `'buddies'` in the aside
 	const ul = document.createElement('ul')
@@ -146,6 +149,7 @@ function makeBuddies() {
 		console.log(li)
 	}
 	document.getElementById(lands[1]).appendChild(ul)
+
 	// insert your aside as a child element of `rivendell`
 }
 
@@ -161,6 +165,7 @@ function leaveTheShire() {
 	
 	// assemble the `hobbits` and move them to `rivendell`
 	const hobbitsList = document.querySelector('.hobbit')
+	const rivendalle = document.getElementById(`${lands[1]}`)
 	// const frodo = document.getElementById("#Frodo Baggins")
 	// const sam = document.getElementById("#Meriadoc \"Merry\" Brandybuck")
 	// const pippin = document.getElementById("#Frodo Baggins")
@@ -168,7 +173,8 @@ function leaveTheShire() {
 
 	 for (let i = 0; i < hobbits.length; i++) {
 	 	hobbitsList.remove(document.getElementById(`#${hobbits[i]}`))
-	 } 
+		rivendalle.append(hobbitsList)
+	} 
 	// hobbitsList.remove(frodo)
 	// hobbitsList.remove(sam)
 	// hobbitsList.remove(merry)
@@ -178,7 +184,6 @@ function leaveTheShire() {
 	// `Meriadoc "Merry" Brandybuck`,
 	// `Peregrin "Pippin" Took`,
 }
-
 // COMMIT YOUR WORK
 // The commit message should read: "Chapter 6 complete - Left the Shire"
 
@@ -203,6 +208,12 @@ function beautifulStranger() {
 function forgeTheFellowShip() {
 	console.log('8: forgeTheFellowShip')
 	// create a new div called `'the-fellowship'` within `rivendell`
+	const theFellowShip = document.createElement('div')
+	theFellowShip.setAttribute('id', 'the-fellowship')
+
+	console.log(theFellowShip)
+	console.log(document.getElementById("rivendell"))
+
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	// after each character is added make an alert that they // have joined your party
 
