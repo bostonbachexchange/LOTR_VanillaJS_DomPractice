@@ -168,7 +168,6 @@ function leaveTheShire() {
 
 	 for (let i = 0; i < hobbits.length; i++) {
 	 	hobbitsList.remove(document.getElementById(`#${hobbits[i]}`))
-	// 	hobbitsList.remove
 	 } 
 	// hobbitsList.remove(frodo)
 	// hobbitsList.remove(sam)
@@ -189,7 +188,8 @@ function leaveTheShire() {
 
 function beautifulStranger() {
 	console.log('7: beautifulStranger')
-
+	const strider = document.querySelector("#Strider")
+	strider.innerText = "Aragorn"
 	// change the `'Strider'` text to `'Aragorn'`
 }
 
