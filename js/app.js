@@ -166,6 +166,7 @@ function leaveTheShire() {
 	// assemble the `hobbits` and move them to `rivendell`
 	const hobbitsList = document.querySelector('.hobbit')
 	const rivendalle = document.getElementById(`${lands[1]}`)
+	console.log(rivendalle)
 	// const frodo = document.getElementById("#Frodo Baggins")
 	// const sam = document.getElementById("#Meriadoc \"Merry\" Brandybuck")
 	// const pippin = document.getElementById("#Frodo Baggins")
@@ -210,11 +211,18 @@ function forgeTheFellowShip() {
 	// create a new div called `'the-fellowship'` within `rivendell`
 	const theFellowShip = document.createElement('div')
 	theFellowShip.setAttribute('id', 'the-fellowship')
+	const rivendalle = document.getElementById(`${lands[1]}`)
+	rivendalle.append(theFellowShip)
+	//const hobbitsList = document.querySelectorAll('.hobbit')
 
 	console.log(theFellowShip)
-	console.log(document.getElementById("rivendell"))
-
+	console.log("bla bla bla" + rivendalle)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
+	for (let i = 0; i < hobbits.length; i++) {
+		let hobbit = document.getElementById(`${hobbits[i]}`)
+	   theFellowShip.append(hobbit)
+	   alert(hobbits[i] + " has joined the party")
+   } 
 	// after each character is added make an alert that they // have joined your party
 
 	// NOTE: This won't change what you see in the browser.  Use your Elements tab of your Inspector tools to make sure that it worked.
