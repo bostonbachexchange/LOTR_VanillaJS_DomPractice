@@ -213,10 +213,6 @@ function forgeTheFellowShip() {
 	theFellowShip.setAttribute('id', 'the-fellowship')
 	const rivendalle = document.getElementById(`${lands[1]}`)
 	rivendalle.append(theFellowShip)
-	//const hobbitsList = document.querySelectorAll('.hobbit')
-
-	console.log(theFellowShip)
-	console.log("bla bla bla" + rivendalle)
 	// add each `hobbit` and `buddy` one at a time to `'the-fellowship'`
 	for (let i = 0; i < hobbits.length; i++) {
 		let hobbit = document.getElementById(`${hobbits[i]}`)
@@ -238,6 +234,12 @@ function forgeTheFellowShip() {
 function theBalrog() {
 	console.log('9: theBalrog')
 	// change the `'Gandalf'` text to `'Gandalf the White'`
+	const gandalf = document.getElementById(`${buddies[0]}`)
+	console.log(gandalf)
+	gandalf.style.backgroundColor = 'white'
+	gandalf.style.border = "grey solid 1px"
+
+
 	// apply the following style to the element, make the // background 'white', add a grey border
 }
 
