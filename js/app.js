@@ -312,6 +312,11 @@ function weWantsIt() {
 function thereAndBackAgain() {
 	console.log('13: thereAndBackAgain')
 	// remove `Gollum` and `the Ring` from the document
+	gollum.remove()
+	for (let i = 0; i < hobbits.length; i++) {
+		let hobbit = document.getElementById(`${hobbits[i]}`)
+		document.getElementById(lands[0]).append(hobbit)
+   } 
 	// Move all the `hobbits` back to `the shire`
 }
 
